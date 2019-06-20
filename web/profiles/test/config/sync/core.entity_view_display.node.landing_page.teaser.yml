@@ -1,0 +1,38 @@
+uuid: d4bc5d73-921d-4f92-a6c3-85aa229cf535
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.body
+    - node.type.landing_page
+  module:
+    - text
+    - user
+id: node.landing_page.teaser
+targetEntityType: node
+bundle: landing_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_banner_image_overlay: true
+  field_enable_title: true
+  field_meta_tags: true
+  field_subtheme: true
+  field_summary: true
+  field_teaser: true
+  field_top_level_theme: true

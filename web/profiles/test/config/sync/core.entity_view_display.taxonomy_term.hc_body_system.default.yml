@@ -1,0 +1,39 @@
+uuid: 72122e94-31fe-4fc6-b34e-2ebe49be28aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.hc_body_system.field_meta_tags
+    - field.field.taxonomy_term.hc_body_system.field_term_hc_synonyms
+    - taxonomy.vocabulary.hc_body_system
+  module:
+    - metatag
+    - text
+id: taxonomy_term.hc_body_system.default
+targetEntityType: taxonomy_term
+bundle: hc_body_system
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_term_hc_synonyms:
+    label: above
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }
