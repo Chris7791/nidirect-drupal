@@ -16,6 +16,9 @@ module:
   config_ignore: 0
   config_readonly: 0
   config_split: 0
+  context: 0
+  context_breadcrumb: 0
+  context_ui: 0
   contextual: 0
   ctools: 0
   ctools_entity_mask: 0

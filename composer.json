@@ -55,6 +55,8 @@
         "drupal/config_split": "^1.4",
         "drupal/config_update": "^1.6",
         "drupal/console": "^1.0.2",
+        "drupal/context": "^4.0@beta",
+        "drupal/context_breadcrumb": "^1.0@beta",
         "drupal/core": "^8.7.0",
         "drupal/entity_embed": "1.0",
         "drupal/field_group": "^1.0",
@@ -134,6 +136,14 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/context": {
+                "Cannot add a context in Drupal 8.7 with layout builder installed": "https://www.drupal.org/files/issues/2019-06-11/context-config-schema-for-lb-support-3043383-12.patch",
+                "Clarify the 'Unique' setting.": "https://www.drupal.org/files/issues/context-unique-description-2881862-2.patch",
+                "Remove @file tag docblock from all the .php files": "https://www.drupal.org/files/issues/context-remove%40file-2881527-1.patch",
+                "Contextual link for removing block": "https://www.drupal.org/files/issues/context_contextual-link-remove-block_2879663_2.patch"
+            }
+        },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
