@@ -1,0 +1,71 @@
+uuid: 5b9aed57-58af-4547-96fd-0b04cec3e810
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_breadcrumb
+    - node
+    - system
+name: article_breadcrumb
+label: 'Article breadcrumb'
+group: Breadcrumb
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: 0
+    uuid: ff4b8141-c1e7-406f-9b3f-a96d1dd468c7
+    context_mapping:
+      node: '@node.node_route_context:node'
+  current_theme:
+    id: current_theme
+    theme: seven
+    negate: 1
+    uuid: 697601d8-6865-4099-8648-afda5d20f44f
+    context_mapping: {  }
+reactions:
+  context_breadcrumb:
+    id: context_breadcrumb
+    breadcrumbs:
+      -
+        title: Themes
+        url: /themes
+        token: ''
+      -
+        title: '[node:field_subtheme:0]'
+        url: 'entity:taxonomy_term/[node:field_subtheme:0:target_id]'
+        token: '1'
+      -
+        title: '[node:field_subtheme:1]'
+        url: 'entity:taxonomy_term/[node:field_subtheme:1:target_id]'
+        token: '1'
+      -
+        title: '[node:field_subtheme:2]'
+        url: 'entity:taxonomy_term/[node:field_subtheme:2:target_id]'
+        token: '1'
+      -
+        title: ''
+        url: ''
+        token: ''
+      -
+        title: ''
+        url: ''
+        token: ''
+      -
+        title: ''
+        url: ''
+        token: ''
+      -
+        title: ''
+        url: ''
+        token: ''
+      -
+        title: ''
+        url: ''
+        token: ''
+    saved: false
+weight: 0
